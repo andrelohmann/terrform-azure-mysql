@@ -15,7 +15,7 @@ resource "azurerm_network_security_group" "TestSG" {
         destination_address_prefix = "*"
     }
 
-    tags {
+    tags = {
         environment = "Terraform Demo"
     }
 }

@@ -37,7 +37,7 @@ resource "azurerm_virtual_machine" "TestVM" {
         storage_uri = "${azurerm_storage_account.TestSA.primary_blob_endpoint}"
     }
 
-    tags {
+    tags = {
         environment = "Terraform Demo"
     }
 }

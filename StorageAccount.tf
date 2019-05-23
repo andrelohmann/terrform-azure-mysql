@@ -5,7 +5,7 @@ resource "azurerm_storage_account" "TestSA" {
     account_replication_type = "LRS"
     account_tier = "Standard"
 
-    tags {
+    tags = {
         environment = "Terraform Demo"
     }
 }

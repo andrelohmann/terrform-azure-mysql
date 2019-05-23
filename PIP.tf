@@ -4,7 +4,7 @@ resource "azurerm_public_ip" "TestPIP" {
     resource_group_name          = "${azurerm_resource_group.TestRG.name}"
     allocation_method            = "Dynamic"
 
-    tags {
+    tags = {
         environment = "Terraform Demo"
     }
 }
