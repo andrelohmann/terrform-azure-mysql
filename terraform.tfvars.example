@@ -1,0 +1,4 @@
+location = "westeurope"
+vm_size = "Standard_B1ls"
+pub_key = "ssh-rsa AAAA..."
+admin_user = "azureuser"
