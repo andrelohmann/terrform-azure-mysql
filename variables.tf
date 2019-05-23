@@ -3,13 +3,13 @@ variable "location" {
 }
 
 variable "vm_size" {
-  type = "string"
+  default = "Standard_B1ls"
 }
 
 variable "pub_key" {
-  type = "string"
+  type = string
 }
 
 variable "admin_user" {
-  type = "string"
+  type = string
 }
