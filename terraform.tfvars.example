@@ -1,4 +1,53 @@
+/**
+ * General Variables
+ */
 location = "westeurope"
-vm_size = "Standard_B1ls"
+environment = "stage"
+name = "MySQL"
+
+mysql_suffix = "__SOME_UNIQUE_STRING__"
+
+/**
+ * Mysql Server sizing
+ */
+mysql_version = "5.7"
+mysql_sku_capacity = 2
+mysql_sku_family = "Gen5"
+mysql_sku_tier = "MemoryOptimized"
+mysql_storage_mb = 102400 # 100 GB
+mysql_backup_retention_days = 7
+
+/**
+ * MySQL Configurations
+ */
+mysql_configurations = {}
+
+/**
+ * MySQL Network rules
+ */
+mysql_virtual_network_rules = []
+
+/**
+ * MySQL Login credentials
+ */
+mysql_admin_user = "myadmin"
+mysql_admin_password = "H@Sh1CoR3!"
+
+/**
+ * Bastian Host sizing
+ */
+bastion_vm_size = "Standard_B1ls"
+
+/**
+ * Bastion Host OS
+ */
+bastion_os_publisher = "Canonical"
+bastion_os_offer = "UbuntuServer"
+bastion_os_sku = "18.04-LTS"
+bastion_os_version = "latest"
+
+/**
+ * Bastian Host authentication
+ */
+admin_user = "azureadmin"
 pub_key = "ssh-rsa AAAA..."
-admin_user = "azureuser"

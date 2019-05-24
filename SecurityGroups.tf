@@ -1,7 +1,7 @@
-resource "azurerm_network_security_group" "TestSG" {
-    name                = "TestSG"
+resource "azurerm_network_security_group" "mysql_stack" {
+    name                = "${var.name}-bastion-sg"
     location            = "${var.location}"
-    resource_group_name = "${azurerm_resource_group.TestRG.name}"
+    resource_group_name = "${azurerm_resource_group.mysql_stack.name}"
 
     security_rule {
         name                       = "SSH"
@@ -16,6 +16,6 @@ resource "azurerm_network_security_group" "TestSG" {
     }
 
     tags = {
-        environment = "Terraform Demo"
+        environment = "${var.environment}"
     }
 }

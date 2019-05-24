@@ -1,8 +1,8 @@
-resource "azurerm_resource_group" "TestRG" {
-    name     = "TestRG"
+resource "azurerm_resource_group" "mysql_stack" {
+    name     = "${var.name}"
     location = "${var.location}"
 
     tags = {
-        environment = "Terraform Demo"
+        environment = "${var.environment}"
     }
 }
