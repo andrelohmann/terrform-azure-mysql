@@ -12,6 +12,10 @@ output "mysql_server_fqdn" {
 /**
  * Bastion host
  */
+data "azurerm_public_ip" "bastion" {
+  name                = "${azurerm_public_ip.mysql_stack.name}"
+  resource_group_name = "${azurerm_virtual_machine.mysql_stack.resource_group_name}"
+}
 output "bastion_public_ip" {
-  value = azurerm_public_ip.mysql_stack.ip_address
+  value = "${data.azurerm_public_ip.bastion.ip_address}"
 }
